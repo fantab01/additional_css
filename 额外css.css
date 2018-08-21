@@ -1,0 +1,656 @@
+/* ---------------------------------------------------------------------------------------------
+   正文设置
+--------------------------------------------------------------------------------------------- */
+
+.post-content {
+	font-family: 'Crimson Text', 'Times New Roman', 'Noto Serif', "Microsoft YaHei New", "Microsoft Yahei", "微软雅黑", STXihei, "华文细黑", sans-serif;
+	font-size: 1.0em;
+	line-height: 170%;
+}
+
+.post-content p,
+.post-content blockquote,
+.post-content ul,
+.post-content ol,
+.post-content address,
+.post-content dl,
+.post-content li,
+.post-content .wp-caption,
+.post-content pre {
+	line-height: 170%;
+	margin-bottom: 1.4em;
+}
+
+
+
+
+
+/* ---------------------------------------------------------------------------------------------
+   各类超链接不同状态下的样式 
+--------------------------------------------------------------------------------------------- */
+
+/* 文章内链接样式 */
+.post-content a {
+	color:#444;
+	border-bottom: 1px solid #444;
+}
+
+/* 除“阅读更多”以外的链接的悬停样式 */
+.post-content a:not(.more-link):hover {  
+	color:#999;
+	border-bottom: 1px solid #999;
+	transition-property: border-color, color;
+	transition-duration: 0.2s;
+	transition-timing-function: ease-in-out;
+}
+
+/* “下一页”链接 */
+.archive-nav {
+	padding: 60px 0;
+    border-top: 1px solid #eee;
+}
+.archive-nav a {
+	color: #444;
+	vertical-align: middle;
+	-webkit-transform: perspective(1px) translateZ(0);
+	transform: perspective(1px) translateZ(0);
+	position: relative;
+	overflow: hidden;
+}
+
+
+
+
+
+/* ---------------------------------------------------------------------------------------------
+   “阅读更多”按钮，“提交评论”按钮，样式自定义
+--------------------------------------------------------------------------------------------- */
+
+.post-content a.more-link {
+	display: inline-block;
+	padding: 0px 0px 6px;
+	font-size: 1.1rem;
+	background: #fff;
+	line-height: 1;
+	font-weight: normal;
+	color: #444;
+	font-family: 'Noto Serif', sans-serif;
+	-webkit-transform: perspective(1px) translateZ(0);
+	transform: perspective(1px) translateZ(0);
+	position: relative;
+	overflow: hidden;
+}
+
+.archive-nav a:before,
+.post-content a.more-link:before {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	left: 0;
+	right: 100%;
+	bottom: 0;
+	background: #999;
+	height: 1px;
+	-webkit-transition-property: right;
+	transition-property: right;
+	-webkit-transition-duration: 0.2s;
+	transition-duration: 0.2s;
+	-webkit-transition-timing-function: ease-out;
+	transition-timing-function: ease-out;
+}
+
+.archive-nav a:hover,
+.post-content a.more-link:hover {
+	background:#fff;
+	color:#999;
+	transition-property: color;
+	transition-duration: 0.2s;
+	transition-timing-function: ease-out;
+}
+
+.archive-nav a:hover:before,
+.archive-nav a:focus:before,
+.archive-nav a:active:before,
+.post-content a.more-link:hover:before,
+.post-content a.more-link:focus:before,
+.post-content a.more-link:active:before {
+	right: 0;
+}
+
+.comment-form input[type="submit"] {
+	display: inline-block;
+	padding: 14px 16px;
+	background: #fff;
+	border: 2px solid #121212;
+	line-height: 1;
+	font-weight: 700;
+	color: #121212;
+	letter-spacing:1px
+}
+.comment-form input[type="submit"]:hover {
+	background: #121212;
+	color: #fff;
+}
+
+
+
+
+
+/* ---------------------------------------------------------------------------------------------
+   “引用”文章样式自定义 
+--------------------------------------------------------------------------------------------- */
+
+.post-quote {
+	background: #fff;
+	color: #444;
+	font-style: italic;
+	line-height: 170%;
+	position: relative;
+	padding-left: 60px;
+}
+
+.post-quote:before {
+	content: '”';
+	display: block;
+	width: auto;
+	font-family: 'Georgia', 'Times New Roman', serif;
+	font-style: normal;
+	font-size: 4em;
+	line-height: 72px;
+	font-weight: 700;
+	color: #888;
+	text-align: center;
+	-webkit-font-smoothing: antialiased;
+	position: absolute;
+	top: 48px;
+	left: -2px;
+	-webkit-transform: translateZ(0);
+	transform: translateZ(0);
+	-webkit-transition-duration: 0.2s;
+	transition-duration: 0.2s;
+	-webkit-transition-property: transform;
+	transition-property: transform;
+	-webkit-transition-timing-function: ease-out;
+	transition-timing-function: ease-out;
+}
+
+a.post-quote:hover { 
+	background: #fff; 
+	color: #121212;
+}
+
+a.post-quote:hover:before,
+a.post-quote:focus:before,
+a.post-quote:active:before { 
+  -webkit-transform: rotate(20deg);
+  transform: rotate(20deg);
+}
+
+.post-content blockquote:before { top: 27px; }
+
+
+
+
+
+/* ---------------------------------------------------------------------------------------------
+   杂项样式自定义
+--------------------------------------------------------------------------------------------- */
+
+/* 博客加载时，wrapper淡入动画 */
+@keyframes fade-in {
+0%{opacity:0;transform:translateY(50px)}
+50%{opacity:0;transform:translateY(25px)}
+100%{opacity:1;transform:translateY(0)}
+}
+@-webkit-keyframes fade-in {
+0%{opacity:0;transform:translateY(50px)}
+50%{opacity:0;transform:translateY(25px)}
+100%{opacity:1;transform:translateY(0)}
+}
+#wrapper {
+	animation: fade-in;
+	animation-duration: 1s;
+	-webkit-animation:fade-in 1s;
+}
+
+/* 搜索框 */
+.post-content input[type="search"] { border: 2px solid #eee; }
+.post-content textarea:focus,
+.post-content input[type="search"]:focus {
+	border: 2px solid #ccc; 
+	background: #fff;
+	color: #444;
+	transition-property: border-color;
+	transition-duration: 0.2s;
+	transition-timing-function: ease-in-out;
+}
+
+/* 文章信息栏 */
+.post-meta-toggle { background: #eee; }
+.post-meta-toggle p { color: #666; }
+.post-meta-toggle .bar { background: #666; }
+.post-meta-toggle.active { background: #444; }
+.post-meta-toggle.active p { color: #fff; }
+.post-meta-toggle.active .bar { background: #fff; }
+.post-meta-inner {
+	background: #444;
+	color: #fff;
+}
+.post-meta-inner a { color: #fff; }
+.post-meta-inner a:hover { color: #999; }
+.post-meta-inner p strong { color: #999; }
+.post-nav { border-top: 2px solid #555; }
+
+/* 杂项颜色 */
+.post-title { color: #222; }
+.post-title a { color: #222; }
+.comments-title { color: #222; }
+.comment-reply-title { color: #222; }
+
+/* 分割线 */
+.post.format-quote + .post { border-top: 1px solid #eee; }
+.post + .post { border-top: 1px solid #eee; }
+.post-content table { border: 1px solid #ddd; }
+
+/* 留言页 */
+.post-18{
+	margin-bottom: 100px;
+}
+
+
+
+
+
+/* ---------------------------------------------------------------------------------------------
+   媒体查询（不同分辨率）
+--------------------------------------------------------------------------------------------- */
+
+@media (min-width: 1200px) {
+
+	/* 电脑端行高 */
+	.post-content p,
+	.post-content blockquote,
+	.post-content ul,
+	.post-content ol,
+	.post-content address,
+	.post-content dl,
+	.post-content li,
+	.post-content .wp-caption,
+	.post-content pre {
+		line-height: 180%;
+	}
+
+	/* body左边距、背景 */
+	body{
+		padding-left: 380px;
+		background: #fff;
+	}
+
+	/* sidebar宽度等于body左边距 */
+	.sidebar {
+		width: 380px;
+		padding: 80px 50px;
+	}
+
+	/* 页面容器外边距 */
+	.wrapper { margin: 30px 0 0 0; }
+
+	/* 页面容器内的元素宽度、最大宽度、外边距 */
+	.wrapper-inner {
+		width: 100%;
+		max-width: 650px;
+		margin: 0 auto;
+	}
+
+	/* 文章容器内边距，与wrapper外边距相加后
+	和sidebar内元素等高，这样对称（强迫症没救了) */
+	.post-inner { padding: 50px 0; }
+
+	/* 侧边栏内各元素 */
+	.blog-title { text-align: left; }
+	.blog-title:after { width: 95%; }
+	.main-menu li { text-align: left; }
+
+	/* 各文章间距 */
+	.posts .post,
+	.posts .page { margin-bottom: 0; }
+
+	/* 微调段落间距 */
+	/* 利用了css里的兄弟类选择器，以区别对待文章内和文章外的特色图片 */
+	.post-header { margin-bottom: 32px; }
+	.featured-media img { margin: 80px auto 0; }
+	.post-header + .featured-media img { margin-top: 0px; }
+	.featured-media + .post-content { margin-top: 32px; }
+	.post-content { margin-bottom: -10px; }
+	.post-content a.more-link { margin-top: 2px; }
+
+	/* “页码”边距 */
+	.page-title { margin-bottom: 30px; }
+	.page-title h4 { padding-top: 50px; }
+
+	/* 评论区边距 */
+	.comments-subtitle {
+		bottom: 37px;
+		right: 0;
+	}
+	.comments-title-container {
+		margin: 0;
+		padding: 80px 0 35px;
+	}
+	.comments,
+	.comment-respond {
+		margin: 0;
+		border-top: 2px solid #eee;
+		padding: 75px 0;
+	}
+
+}
+
+@media (max-width: 1200px) {	
+
+	/* body左边距、背景 */
+	body{
+		padding-left: 350px;
+		background: #fff;
+	}
+
+	/* sidebar宽度等于body左边距 */
+	.sidebar {
+		width: 350px;
+		padding: 80px 50px;
+	}
+
+	/* 页面容器内的元素宽度、最大宽度、外边距 */
+	.wrapper-inner {
+		width: 100%;
+		max-width: 600px;
+		margin: 0 auto;
+	}
+
+	/* 之后部分简单复制粘贴 min-width: 1200px */
+	.wrapper { margin: 30px 0 0 0; }				/* 页面容器外边距 */
+	.post-inner { padding: 50px 0; }				/* 文章容器内边距 */
+	.posts .post,									/* 各文章间距 */
+	.posts .page { margin-bottom: 0; }
+	.page-title { margin-bottom: 30px; }			/* “页码”边距 */
+	.page-title h4 { padding-top: 50px; }
+	.blog-title { text-align: left; }				/* 侧边栏内各元素边距 */
+	.blog-title:after { width: 95%; }
+	.main-menu li { text-align: left; }
+	.post-header { margin-bottom: 32px; }			/* 微调段落间距 */
+	.featured-media img { margin: 80px auto 0; }
+	.post-header + .featured-media img { margin-top: 0px; }
+	.featured-media + .post-content { margin-top: 32px; }
+	.post-content { margin-bottom: -10px; }
+	.post-content a.more-link { margin-top: 2px; }
+	.comments-subtitle {							/* 评论区边距 */
+		bottom: 37px;
+		right: 0;
+	}
+	.comments-title-container {
+		margin: 0;
+		padding: 80px 0 35px;
+	}
+	.comments,
+	.comment-respond {
+		border-top: 2px solid #eee;
+		padding: 75px 0;
+		margin: 0;
+	}
+
+}
+
+@media (max-width: 1100px) {
+
+	body{
+		padding-left: 320px;
+	}
+
+	.sidebar {
+		width: 320px;
+		padding: 80px 40px;
+	}
+
+	.wrapper-inner {
+		width: 100%;
+		max-width: 560px;
+		margin: 0 auto;
+	}
+
+}
+
+
+@media (max-width: 1000px) {
+
+	body{
+		padding-left: 300px;
+	}
+
+	.sidebar {
+		width: 300px;
+		padding: 80px 40px;
+	}
+
+}
+
+
+@media (max-width: 930px) {
+	
+	/* 移动设备侧边栏改为顶部导航 */
+	body{ padding-left: 0px; }
+	.wrapper { margin: 86px 0 0 0; }
+
+	/* 注意，前面一直是通过“wrapperinner”调节文章边距，
+	但从此处往下，重置了“wrapperinner”属性，并开始通过“post-inner”来调节文章边距，
+	这样可以以最小代价保障文章分割线、文章评论区、“post-meta”、“引用样式”及“特色图片”在移动设备上显示正常。 */
+	/* 我聪明死了 */
+	.wrapper-inner {
+		width: 100%;
+		max-width: 100%;
+		margin: 0 auto;
+	}
+	.post-inner {
+		width: auto;
+		max-width: 85%;
+		margin: 0 auto;
+	}
+
+	/* 需要与post-inner宽度平齐的元素 */
+	.post-quote:before { left: 7%; }
+	.archive-nav { padding: 60px 7.5%; }
+	.sidebar-inner {
+		width: auto;
+		max-width: 85%; 
+		margin: 0 auto;
+	}
+	.comments,
+	.comment-respond { padding: 75px 7.5%; }
+	.comments-title-container { padding: 65px 7.5% 60px; }
+	.comments-subtitle {
+		bottom: 62px;
+		right: 7.5%;
+	}
+
+	/* “页码”边距 */
+	.page-title { margin-bottom: 0px; }
+	.page-title h4 {
+		padding-top: 70px;
+		border-bottom: 1px solid #eee;
+		padding-bottom: 70px
+	}
+	
+	/* 文章内部“特色图片“全屏展示 */
+	.featured-media img {
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	/* 顶部导航栏自动显示与隐藏动画 */
+	.sidebar {
+		width: 100%;
+		padding: 30px 0;
+		position: fixed;	
+		top: 0;
+		z-index: 99999;
+		-webkit-transform: translate3d(0);
+		-moz-transform: translate3d(0);
+		-ms-transform: translate3d(0);
+		-o-transform: translate3d(0);
+		transform: translate3d(0);
+		-webkit-transition: transform 0.5s ease-out;
+		-moz-transition: transform 0.5s ease-out;
+		-o-transition: transform 0.5s ease-out;
+		transition: transform 0.5s ease-out;
+	}
+
+	.sidebar.is-hidden {
+		-webkit-transform: translate3d(0,-100%,0);
+		-moz-transform: translate3d(0,-100%,0);
+		-ms-transform: translate3d(0,-100%,0);
+		-o-transform: translate3d(0,-100%,0);
+		transform: translate3d(0,-100%,0);
+	}
+
+	.mobile-menu { 
+		background: #121212;
+		color: #fff;
+		overflow: auto;
+		padding: 0 7.5% 0 7.5%;			/* 需要与post-inner宽度平齐的元素 */
+		position: absolute;
+			top: 85px;
+			bottom: calc(100% - 387px);	/* 拿尺子搁屏幕上量的... */
+			left: 0;
+			right: 0;
+		z-index: 10000;
+	}
+
+}
+
+
+@media (max-width: 700px) {
+
+	.post-inner {
+		width: auto;
+		max-width: 90%;
+		padding: 40px 0;
+		margin: 0 auto;
+	}
+
+	/* 需要与post-inner宽度平齐的元素 */
+	.mobile-menu { padding: 0 5% 0 5%; }
+	.archive-nav { padding: 60px 5%; }
+	.post-quote { padding-left: 50px; }
+	.post-quote:before { left: 4.5%; top: 38px;}
+	.sidebar-inner {
+		width: auto;
+		max-width: 90%; 
+		margin: 0 auto;
+	}
+	.comments,
+	.comment-respond { padding: 60px 5%; }
+	.comments-title-container {
+		padding: 45px 5% 40px;
+		border-bottom: 0px;
+	}
+	.comments-subtitle {
+		bottom: 42px;
+		right: 5%;
+	}
+
+	/* “页码”边距 */
+	.page-title h4 {
+		padding-top: 60px;
+		padding-bottom: 60px
+	}
+
+	/* 覆盖，等600px再调小这部分字体 */
+	.mobile-menu a { font-size: 16px; }
+
+}
+
+@media (max-width: 600px) {
+
+	.sidebar { padding: 20px 0; }
+	.wrapper { margin: 64px 0 0 0; }
+
+	.post-content a.more-link { font-size: 1.0rem; }
+	.comment-form input[type="submit"] { padding: 12px 14px; }
+	.post-quote { padding-left: 50px; }
+	.post-quote:before {
+		top: 36px;
+		left: 4.5%;
+	}
+
+	.mobile-menu {
+		top: 63px;
+		bottom: calc(100% - 337px);
+	}
+
+	/* 评论区边距 */
+	.comments,
+	.comment-respond { padding: 35px 5%; }
+
+	/* 微调段落间距 */
+	.post-header { margin-bottom: 26px; }
+	.post-header + .featured-media { margin-top: -10px; }
+	.featured-media + .post-content { margin-top: 22px; }
+	.post-content a.more-link { margin-top: 0px; }
+
+	/* “页码”边距 */
+	.page-title h4 {
+		padding-top: 50px;
+		padding-bottom: 50px
+	}
+
+	/* 到600px了，调小 */
+	.mobile-menu a { font-size: 14px; }
+
+}
+
+@media (max-width: 500px) {
+
+	.wrapper { margin: 60px 0 0 0; }
+	.mobile-menu { top: 59px; }
+
+	/* “页码”边距 */
+	.page-title h4 {
+		padding-top: 40px;
+		padding-bottom: 40px
+	}
+
+}
+
+@media ( max-width: 400px ) {
+
+	.post-quote { padding-left: 45px; }
+
+}
+
+
+
+
+
+/* ---------------------------------------------------------------------------------------------
+   媒体查询（不同移动平台）
+--------------------------------------------------------------------------------------------- */
+
+/* 针对除ios以外的其他移动设备 */ 
+@supports not (-webkit-overflow-scrolling: touch) {
+
+	.archive-nav a,
+	.more-link {
+		-webkit-tap-highlight-color:rgba(255,0,0,0);
+	}
+
+}
+
+/* 此项规则仅用于傻逼safari */
+@supports (-webkit-overflow-scrolling: touch) {
+
+	/* 菜单下拉时使body成为可点击对象并隐藏点击遮罩 */
+	body.enable-click {
+		cursor: pointer;
+		-webkit-tap-highlight-color:rgba(255,0,0,0);
+	}
+
+}
