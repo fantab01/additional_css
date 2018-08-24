@@ -8,6 +8,7 @@
 	line-height: 170%;
 }
 
+.post-content pre { max-height: 600px; }
 .post-content p,
 .post-content blockquote,
 .post-content ul,
@@ -15,8 +16,7 @@
 .post-content address,
 .post-content dl,
 .post-content li,
-.post-content .wp-caption,
-.post-content pre {
+.post-content .wp-caption {
 	line-height: 170%;
 	margin-bottom: 1.4em;
 }
@@ -146,24 +146,24 @@
 	font-style: italic;
 	line-height: 170%;
 	position: relative;
-	padding-left: 60px;
+	padding-left: 55px;
 }
 
 .post-quote:before {
 	content: '”';
 	display: block;
 	width: auto;
-	font-family: 'Georgia', 'Times New Roman', serif;
+	font-family: 'Palanquin', serif;
 	font-style: normal;
-	font-size: 4em;
+	font-size: 4.5em;
 	line-height: 72px;
 	font-weight: 700;
 	color: #888;
 	text-align: center;
 	-webkit-font-smoothing: antialiased;
 	position: absolute;
-	top: 48px;
-	left: -2px;
+	top: 44px;
+	left: 0px;
 	-webkit-transform: translateZ(0);
 	transform: translateZ(0);
 	-webkit-transition-duration: 0.2s;
@@ -275,8 +275,7 @@ a.post-quote:active:before {
 	.post-content address,
 	.post-content dl,
 	.post-content li,
-	.post-content .wp-caption,
-	.post-content pre {
+	.post-content .wp-caption {
 		line-height: 180%;
 	}
 
@@ -440,6 +439,9 @@ a.post-quote:active:before {
 	body{ padding-left: 0px; }
 	.wrapper { margin: 86px 0 0 0; }
 
+	/* 引用样式 */
+	a.post-quote:hover{ background-color:#eee; }
+
 	/* 注意，前面一直是通过“wrapperinner”调节文章边距，
 	但从此处往下，重置了“wrapperinner”属性，并开始通过“post-inner”来调节文章边距，
 	这样可以以最小代价保障文章分割线、文章评论区、“post-meta”、“引用样式”及“特色图片”在移动设备上显示正常。 */
@@ -456,7 +458,7 @@ a.post-quote:active:before {
 	}
 
 	/* 需要与post-inner宽度平齐的元素 */
-	.post-quote:before { left: 7%; }
+	.post-quote:before { left: 7.5%; }
 	.archive-nav { padding: 60px 7.5%; }
 	.sidebar-inner {
 		width: auto;
@@ -539,8 +541,10 @@ a.post-quote:active:before {
 	/* 需要与post-inner宽度平齐的元素 */
 	.mobile-menu { padding: 0 5% 0 5%; }
 	.archive-nav { padding: 60px 5%; }
-	.post-quote { padding-left: 50px; }
-	.post-quote:before { left: 4.5%; top: 38px;}
+	.post-quote:before {
+		left: 5%;
+		top: 34px;
+	}
 	.sidebar-inner {
 		width: auto;
 		max-width: 90%; 
@@ -576,10 +580,7 @@ a.post-quote:active:before {
 	.post-content a.more-link { font-size: 1.0rem; }
 	.comment-form input[type="submit"] { padding: 12px 14px; }
 	.post-quote { padding-left: 50px; }
-	.post-quote:before {
-		top: 36px;
-		left: 4.5%;
-	}
+	.post-quote:before { top: 30px; }
 
 	.mobile-menu {
 		top: 63px;
@@ -637,6 +638,7 @@ a.post-quote:active:before {
 /* 针对除ios以外的其他移动设备 */ 
 @supports not (-webkit-overflow-scrolling: touch) {
 
+	a.post-quote,
 	.archive-nav a,
 	.more-link {
 		-webkit-tap-highlight-color:rgba(255,0,0,0);
