@@ -229,15 +229,15 @@ a.post-quote:active:before {
 .post-meta-toggle { background: #eee; }
 .post-meta-toggle p { color: #666; }
 .post-meta-toggle .bar { background: #666; }
-.post-meta-toggle.active { background: #444; }
+.post-meta-toggle.active { background: #242424; }
 .post-meta-toggle.active p { color: #fff; }
 .post-meta-toggle.active .bar { background: #fff; }
 .post-meta-inner {
-	background: #444;
+	background: #242424;
 	color: #fff;
 }
-.post-meta-inner a { color: #fff; }
-.post-meta-inner a:hover { color: #999; }
+.post-meta-inner a { color: #eee; }
+.post-meta-inner a:hover { color: #ccc; }
 .post-meta-inner p strong { color: #999; }
 .post-nav { border-top: 2px solid #555; }
 
@@ -321,7 +321,9 @@ a.post-quote:active:before {
 	.post-header + .featured-media img { margin-top: 0px; }
 	.featured-media + .post-content { margin-top: 32px; }
 	.post-content { margin-bottom: -10px; }
-	.post-content a.more-link { margin-top: 2px; }
+	.post-content a.more-link { margin-top: 3px; }
+	.post-content table,
+	.post-content pre { margin-bottom: 25.2px; }
 
 	/* “页码”边距 */
 	.page-title { margin-bottom: 30px; }
@@ -387,7 +389,9 @@ a.post-quote:active:before {
 	.post-header + .featured-media img { margin-top: 0px; }
 	.featured-media + .post-content { margin-top: 32px; }
 	.post-content { margin-bottom: -10px; }
-	.post-content a.more-link { margin-top: 2px; }
+	.post-content a.more-link { margin-top: 3px; }
+	.post-content table,
+	.post-content pre { margin-bottom: 25.2px; }
 	.comments-subtitle {							/* 评论区边距 */
 		bottom: 37px;
 		right: 0;
@@ -407,9 +411,7 @@ a.post-quote:active:before {
 
 @media (max-width: 1100px) {
 
-	body{
-		padding-left: 320px;
-	}
+	body{ padding-left: 320px; }
 
 	.sidebar {
 		width: 320px;
@@ -500,13 +502,11 @@ a.post-quote:active:before {
 		position: fixed;	
 		top: 0;
 		z-index: 99999;
-
 		-webkit-transform: translate3d(0);
 		-moz-transform: translate3d(0);
 		-ms-transform: translate3d(0);
 		-o-transform: translate3d(0);
 		transform: translate3d(0);
-		
 		-webkit-transition: transform 0.5s ease-out;
 		-moz-transition: transform 0.5s ease-out;
 		-o-transition: transform 0.5s ease-out;
@@ -584,12 +584,11 @@ a.post-quote:active:before {
 
 	.sidebar { padding: 20px 0; }
 	.wrapper { margin: 64px 0 0 0; }
-
+	
 	.post-content a.more-link { font-size: 1.0rem; }
 	.comment-form input[type="submit"] { padding: 12px 14px; }
-	.post-quote { padding-left: 50px; }
-	.post-quote:before { top: 30px; }
-
+	.post-quote { padding-left: 47px; }
+	.post-quote:before { top: 30px; font-size: 4em; }
 	.mobile-menu {
 		top: 63px;
 		bottom: calc(100% - 337px);
@@ -600,7 +599,9 @@ a.post-quote:active:before {
 	.comment-respond { padding: 35px 5%; }
 
 	/* 微调段落间距 */
-	.post-header { margin-bottom: 26px; }
+	.post-content table,
+	.post-content pre { margin-bottom: 22.4px; }
+	.post-header { margin-bottom: 22px; }
 	.post-header + .featured-media { margin-top: -10px; }
 	.featured-media + .post-content { margin-top: 22px; }
 	.post-content a.more-link { margin-top: 0px; }
@@ -618,6 +619,7 @@ a.post-quote:active:before {
 
 @media (max-width: 500px) {
 
+	.post-content pre { max-height: 400px; }
 	.wrapper { margin: 60px 0 0 0; }
 	.mobile-menu { top: 59px; }
 
@@ -631,7 +633,7 @@ a.post-quote:active:before {
 
 @media ( max-width: 400px ) {
 
-	.post-quote { padding-left: 45px; }
+	.post-quote { padding-left: 42px; }
 
 }
 
