@@ -127,7 +127,9 @@
 	color: #121212;
 	letter-spacing:1px
 }
-.comment-form input[type="submit"]:hover {
+.comment-form input[type="submit"]:hover,
+.comment-form input[type="submit"]:focus,
+.comment-form input[type="submit"]:active {
 	background: #121212;
 	color: #fff;
 }
@@ -512,7 +514,6 @@ a.post-quote:active:before {
 		-o-transition: transform 0.5s ease-out;
 		transition: transform 0.5s ease-out;
 	}
-
 	.sidebar.is-hidden {
 		-webkit-transform: translate3d(0,-100%,0);
 		-moz-transform: translate3d(0,-100%,0);
@@ -520,7 +521,6 @@ a.post-quote:active:before {
 		-o-transform: translate3d(0,-100%,0);
 		transform: translate3d(0,-100%,0);
 	}
-
 	.mobile-menu { 
 		background: #121212;
 		color: #fff;
@@ -584,7 +584,6 @@ a.post-quote:active:before {
 
 	.sidebar { padding: 20px 0; }
 	.wrapper { margin: 64px 0 0 0; }
-	
 	.post-content a.more-link { font-size: 1.0rem; }
 	.comment-form input[type="submit"] { padding: 12px 14px; }
 	.post-quote { padding-left: 47px; }
@@ -649,6 +648,7 @@ a.post-quote:active:before {
 @supports not (-webkit-overflow-scrolling: touch) {
 
 	a.post-quote,
+	.post-meta-toggle,
 	.archive-nav a,
 	.more-link {
 		-webkit-tap-highlight-color:rgba(255,0,0,0);
