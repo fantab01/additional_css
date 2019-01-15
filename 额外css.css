@@ -349,12 +349,12 @@ a.post-quote:active:before {
 
 	/* 微调段落间距 */
 	/* 利用了css里的兄弟类选择器，以区别对待文章内和文章外的特色图片 */
-	.post-header { margin-bottom: 32px; }
+	.post-header { margin-bottom: 30px; }
 	.featured-media img { margin: 80px auto 0; }
 	.post-header + .featured-media img { margin-top: 0px; }
-	.featured-media + .post-content { margin-top: 32px; }
+	.featured-media + .post-content { margin-top: 30px; }
 	.post-content { margin-bottom: -10px; }
-	.post-content a.more-link { margin-top: 3px; }
+	.post-content a.more-link { margin-top: 2px; }
 	.post-content table,
 	.post-content pre { margin-bottom: 25.2px; }
 
@@ -417,12 +417,12 @@ a.post-quote:active:before {
 	.blog-title { text-align: left; }				/* 侧边栏内各元素边距 */
 	.blog-title:after { width: 95%; }
 	.main-menu li { text-align: left; }
-	.post-header { margin-bottom: 32px; }			/* 微调段落间距 */
+	.post-header { margin-bottom: 30px; }			/* 微调段落间距 */
 	.featured-media img { margin: 80px auto 0; }
 	.post-header + .featured-media img { margin-top: 0px; }
-	.featured-media + .post-content { margin-top: 32px; }
+	.featured-media + .post-content { margin-top: 30px; }
 	.post-content { margin-bottom: -10px; }
-	.post-content a.more-link { margin-top: 3px; }
+	.post-content a.more-link { margin-top: 2px; }
 	.post-content table,
 	.post-content pre { margin-bottom: 25.2px; }
 	.comments-subtitle {							/* 评论区边距 */
@@ -567,7 +567,7 @@ a.post-quote:active:before {
 		padding: 0 7.5% 0 7.5%;			/* 需要与post-inner宽度平齐的元素 */
 		position: absolute;
 			top: 85px;
-			bottom: calc(100% - 350px);	/* 拿尺子搁屏幕上量的... */
+			bottom: calc(100% - 337px);	/* 拿尺子搁屏幕上量的... */
 			left: 0;
 			right: 0;
 		z-index: 10000;
@@ -591,6 +591,7 @@ a.post-quote:active:before {
 	.post-quote:before {
 		left: 5%;
 		top: 34px;
+		font-size: 4.2em;	/* 700px时页边距变窄了，所以为了美观调小 */
 	}
 	.sidebar-inner {
 		width: auto;
@@ -625,27 +626,22 @@ a.post-quote:active:before {
 	.wrapper { margin: 64px 0 0 0; }
 	.post-content a.more-link { font-size: 1.0rem; }
 	.comment-form input[type="submit"] { padding: 12px 14px; }
-	.post-quote { padding-left: 47px; }
-	.post-quote:before {
-		top: 30px;
-		font-size: 4em;
-	}
 	.mobile-menu {
 		top: 63px;
-		bottom: calc(100% - 300px);
+		bottom: calc(100% - 287px);
 	}
 
 	/* 评论区边距 */
 	.comments,
 	.comment-respond { padding: 35px 5%; }
 
-	/* 微调段落间距 */
+	/* 微调间距 */
 	.post-content table,
 	.post-content pre { margin-bottom: 22.4px; }
-	.post-header { margin-bottom: 22px; }
-	.post-header + .featured-media { margin-top: -10px; }
-	.featured-media + .post-content { margin-top: 22px; }
-	.post-content a.more-link { margin-top: 0px; }
+	.post-header { margin-bottom: 25px; }
+	.featured-media + .post-content { margin-top: 25px; }
+	.post-quote { padding-left: 45px; }
+	.post-quote:before { top: 31px; }
 
 	/* “页码”边距 */
 	.page-title h4 {
@@ -664,6 +660,26 @@ a.post-quote:active:before {
 	.wrapper { margin: 60px 0 0 0; }
 	.mobile-menu { top: 59px; }
 
+	/* 间距调整 */
+	.post-content p,
+	.post-content blockquote,
+	.post-content ul,
+	.post-content ol,
+	.post-content address,
+	.post-content dl,
+	.post-content li,
+	.post-content .wp-caption { margin-bottom: 1.2em; }
+	.post-header { margin-bottom: 20px; }
+	.featured-media + .post-content { margin-top: 20px; }
+	.post-content a.more-link { margin-top: 1px; }
+	#posts .post:first-child > .post-inner{ padding-top: 38px; }
+	.post-quote { padding-left: 40px; }
+	.post-quote:before {
+		top: 29px;
+		font-size: 3.8em;
+	}
+
+
 	/* “页码”边距 */
 	.page-title h4 {
 		padding-top: 40px;
@@ -674,7 +690,7 @@ a.post-quote:active:before {
 
 @media ( max-width: 400px ) {
 
-	.post-quote { padding-left: 42px; }
+	.post-quote { padding-left: 38px; }
 
 }
 
