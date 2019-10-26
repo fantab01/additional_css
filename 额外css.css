@@ -354,7 +354,7 @@ a.post-quote:active:before {
 	.post-header + .featured-media img { margin-top: 0px; }
 	.featured-media + .post-content { margin-top: 30px; }
 	.post-content { margin-bottom: -10px; }
-	.post-content a.more-link { margin-top: 2px; }
+	.post-content a.more-link { margin-top: 3px; }
 	.post-content table,
 	.post-content pre { margin-bottom: 25.2px; }
 
@@ -422,7 +422,7 @@ a.post-quote:active:before {
 	.post-header + .featured-media img { margin-top: 0px; }
 	.featured-media + .post-content { margin-top: 30px; }
 	.post-content { margin-bottom: -10px; }
-	.post-content a.more-link { margin-top: 2px; }
+	.post-content a.more-link { margin-top: 3px; }
 	.post-content table,
 	.post-content pre { margin-bottom: 25.2px; }
 	.comments-subtitle {							/* 评论区边距 */
