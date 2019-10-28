@@ -485,6 +485,11 @@ a.post-quote:active:before {
 
 @media (max-width: 1000px) {
 	
+	/* 修改移动设备下拉菜单项间距 */
+	.mobile-menu li { margin-top: 25px; }
+	.mobile-menu li:first-child { margin-top: 30px; }
+	.mobile-menu li:last-child { margin-bottom: 30px; }
+
 	/* 移动设备侧边栏改为顶部导航 */
 	body{ padding-left: 0px; }
 	.wrapper { margin: 86px 0 0 0; }
@@ -553,6 +558,17 @@ a.post-quote:active:before {
 		-o-transition: transform 0.5s ease-out;
 		transition: transform 0.5s ease-out;
 	}
+	.sidebar:after {
+		content: '';
+		display: block;
+		height: 2px;
+		background: #282828;
+		position: absolute;
+		z-index: 100000;
+		right: 0;
+		bottom: 0;
+		left: 0; 
+	}
 	.sidebar.is-hidden {
 		-webkit-transform: translate3d(0,-100%,0);
 		-moz-transform: translate3d(0,-100%,0);
@@ -566,8 +582,8 @@ a.post-quote:active:before {
 		overflow: auto;
 		padding: 0 7.5% 0 7.5%;			/* 需要与post-inner宽度平齐的元素 */
 		position: absolute;
-			top: 85px;
-			bottom: calc(100% - 337px);	/* 拿尺子搁屏幕上量的... */
+			top: 85px;					/* 顶栏宽86.4px，重叠1px防白边 */
+			bottom: calc(100% - 367px);	/* 微调使下缘距菜单项30px，因最后一个菜单项较长，故366px多给了1px */
 			left: 0;
 			right: 0;
 		z-index: 10000;
@@ -622,13 +638,15 @@ a.post-quote:active:before {
 
 @media (max-width: 600px) {
 
+	.mobile-menu li { margin-top: 20px; }
+
 	.sidebar { padding: 20px 0; }
 	.wrapper { margin: 64px 0 0 0; }
 	.post-content a.more-link { font-size: 1.0rem; }
 	.comment-form input[type="submit"] { padding: 12px 14px; }
 	.mobile-menu {
-		top: 63px;
-		bottom: calc(100% - 287px);
+		top: 63px;					/* 顶栏宽64px，重叠1px防白边 */
+		bottom: calc(100% - 305px); /* 微调使下缘距菜单项30px，因最后一个菜单项较长，故304px多给了1px */
 	}
 
 	/* 评论区边距 */
@@ -658,7 +676,10 @@ a.post-quote:active:before {
 
 	.post-content pre { max-height: 400px; }
 	.wrapper { margin: 60px 0 0 0; }
-	.mobile-menu { top: 59px; }
+	.mobile-menu {
+		top: 59px;					/* 顶栏宽60px，重叠1px防白边 */
+		bottom: calc(100% - 301px); /* 微调使下缘距菜单项30px，因最后一个菜单项较长，故300px多给了1px */
+	}
 
 	/* 间距调整 */
 	.post-content p,
