@@ -74,7 +74,7 @@
 	line-height: 1;
 	font-weight: normal;
 	color: #444;
-	font-family: 'Noto Serif', sans-serif;
+	font-family: sans-serif;
 	-webkit-transform: perspective(1px) translateZ(0);
 	transform: perspective(1px) translateZ(0);
 	position: relative;
@@ -155,7 +155,7 @@
 	content: '”';
 	display: block;
 	width: auto;
-	font-family: 'Palanquin', serif;
+	font-family: serif;
 	font-style: normal;
 	font-size: 4.5em;
 	line-height: 72px;
