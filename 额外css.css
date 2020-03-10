@@ -190,6 +190,10 @@ a.post-quote:active:before {
 
 .post-content blockquote:before { top: 27px; }
 
+.post-status-inner > .post-content blockquote { margin-top: -10px; }
+.post-content blockquote p { font-style: normal; }
+.post-content blockquote:before { font-family: 'Helvetica', san-serif; }
+
 
 
 
