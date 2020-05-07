@@ -261,6 +261,9 @@ a.post-quote:active:before {
 /* 留言页 */
 .post-18{ margin-bottom: 100px; }
 
+/* 评论区 */
+.comment-actions { margin-top: 32px; }
+
 /* 页标题 */
 .page-title {
 	border-bottom: 1px solid #eee;
