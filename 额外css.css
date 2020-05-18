@@ -190,7 +190,8 @@ a.post-quote:active:before {
 
 .post-content blockquote:before { top: 27px; }
 
-.post-status-inner > .post-content blockquote { margin-top: -10px; }
+.post-status-inner > .post-content p + blockquote { margin-top: -10px; }
+.post-status-header + .post-content blockquote { margin-top: 1.4em; }
 .post-content blockquote p { font-style: normal; }
 .post-content blockquote:before { font-family: 'Helvetica', san-serif; }
 
@@ -714,6 +715,7 @@ a.post-quote:active:before {
 	.featured-media + .post-content { margin-top: 20px; }
 	.post-content a.more-link { margin-top: 1px; }
 	#posts .post:first-child > .post-inner{ padding-top: 40px; }
+	.post-status-header + .post-content blockquote { margin-top: 1.2em; }
 	.post-quote { padding-left: 40px; }
 	.post-quote:before {
 		top: 29px;
