@@ -333,7 +333,10 @@ a.post-quote:active:before {
 	}
 
 	/* 页面容器外边距 */
-	.wrapper { margin: 30px 0 0 0; }
+	.wrapper {
+		margin: 0 0 0 0;
+		padding-top: 30px;
+	}
 
 	/* 页面容器内的元素宽度、最大宽度、外边距 */
 	.wrapper-inner {
@@ -418,7 +421,10 @@ a.post-quote:active:before {
 	}
 
 	/* 之后部分简单复制粘贴 min-width: 1200px */
-	.wrapper { margin: 30px 0 0 0; }				/* 页面容器外边距 */
+	.wrapper {
+		margin: 0 0 0 0;
+		padding-top: 30px;
+	}												/* 页面容器内边距 */
 	.post-inner { padding: 50px 0; }				/* 文章容器内边距 */
 	.post-status-inner { padding: 60px 0; }
 	.posts .post,									/* 各文章间距 */
@@ -504,7 +510,10 @@ a.post-quote:active:before {
 
 	/* 移动设备侧边栏改为顶部导航 */
 	body{ padding-left: 0px; }
-	.wrapper { margin: 86px 0 0 0; }
+	.wrapper {
+		margin: 0 0 0 0;
+		padding-top: 86px;
+	}
 
 	/* 引用样式 */
 	a.post-quote:hover{ background-color:#eee; }
@@ -660,7 +669,10 @@ a.post-quote:active:before {
 	.mobile-menu li { margin-top: 20px; }
 
 	.sidebar { padding: 20px 0; }
-	.wrapper { margin: 64px 0 0 0; }
+	.wrapper {
+		margin: 0 0 0 0;
+		padding-top: 64px;
+	}
 	.post-content a.more-link { font-size: 1.0rem; }
 	.comment-form input[type="submit"] { padding: 12px 14px; }
 	.mobile-menu {
@@ -695,7 +707,10 @@ a.post-quote:active:before {
 @media (max-width: 500px) {
 
 	.post-content pre { max-height: 400px; }
-	.wrapper { margin: 60px 0 0 0; }
+	.wrapper {
+		margin: 0 0 0 0;
+		padding-top: 60px;
+	}
 	.mobile-menu {
 		top: 59px;					/* 顶栏宽60px，重叠1px防白边 */
 		bottom: calc(100% - 301px); /* 微调使下缘距菜单项30px，因最后一个菜单项较长，故300px多给了1px */
