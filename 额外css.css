@@ -78,10 +78,17 @@
 	-webkit-transform: perspective(1px) translateZ(0);
 	transform: perspective(1px) translateZ(0);
 	position: relative;
-	overflow: hidden;
+	overflow: hidden; 
+}
+
+.archive-nav a,
+.comments-subtitle a {
+	display: inline-block;
+	padding: 0px 0px 3px;
 }
 
 .archive-nav a:before,
+.comments-subtitle a:before,
 .post-content a.more-link:before {
 	content: "";
 	position: absolute;
@@ -98,8 +105,10 @@
 	-webkit-transition-timing-function: ease-out;
 	transition-timing-function: ease-out;
 }
+.comments-subtitle a:before { background: #121212; }
 
 .archive-nav a:hover,
+.comments-subtitle a:hover,
 .post-content a.more-link:hover {
 	background:#fff;
 	color:#999;
@@ -107,7 +116,11 @@
 	transition-duration: 0.2s;
 	transition-timing-function: ease-out;
 }
+.comments-subtitle a:hover { color:#121212; }
 
+.comments-subtitle a:hover:before,
+.comments-subtitle a:focus:before,
+.comments-subtitle a:active:before,
 .archive-nav a:hover:before,
 .archive-nav a:focus:before,
 .archive-nav a:active:before,
@@ -189,7 +202,6 @@ a.post-quote:active:before {
 }
 
 .post-content blockquote:before { top: 27px; }
-
 .post-status-inner > .post-content p + blockquote { margin-top: -10px; }
 .post-status-header + .post-content blockquote { margin-top: 1.4em; }
 .post-content blockquote p { font-style: normal; }
@@ -763,6 +775,7 @@ a.post-quote:active:before {
 /* 针对除ios以外的其他移动设备 */ 
 @supports not (-webkit-overflow-scrolling: touch) {
 
+	.comments-subtitle a,
 	a.post-quote,
 	.post-meta-toggle,
 	.archive-nav a,
