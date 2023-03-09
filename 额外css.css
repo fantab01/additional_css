@@ -2,8 +2,24 @@
    正文设置
 --------------------------------------------------------------------------------------------- */
 
+.post-content,
+.post-content h1,
+.post-content h2,
+.post-content h3,
+.post-content h4,
+.post-content h5,
+.post-content h6,
+.post-content a.more-link,
+.post-title,
+.post-date,
+.post-status-date { font-family: 'Noto Serif SC', serif; }
+
+.blog-title,
+.main-menu,
+.mobile-menu,
+.nav-toggle p { font-family: 'Montserrat', sans-serif; }
+
 .post-content {
-	font-family: sans-serif;
 	font-size: 1.0em;
 	line-height: 170%;
 }
@@ -73,7 +89,6 @@
 	line-height: 1;
 	font-weight: normal;
 	color: #444;
-	font-family: sans-serif;
 	-webkit-transform: perspective(1px) translateZ(0);
 	transform: perspective(1px) translateZ(0);
 	position: relative;
