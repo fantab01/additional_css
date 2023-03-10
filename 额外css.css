@@ -313,7 +313,7 @@ a.post-quote:active:before {
 .post-content p + blockquote,
 .post-content p + table,
 .post-content table + table,
-.post-content p + pre { margin-top: 1.4em; }
+.post-content pre { margin-top: 1.4em; }
 .post-content img { margin: 1.4em 0; }
 .full-width-gallery img { margin: 0; }
 .post-content ul,
@@ -821,7 +821,7 @@ a.post-quote:active:before {
 	.post-content p + blockquote,
 	.post-content p + table,
 	.post-content table + table,
-	.post-content p + pre { margin-top: 1.2em; }
+	.post-content pre { margin-top: 1.2em; }
 	.post-content > *:first-child { margin-top: 1.2em; }
 	.post-content img { margin: 1.2em 0; }
 	.full-width-gallery img { margin: 0; }
