@@ -13,7 +13,6 @@
 .post-title,
 .post-date,
 .post-status-date { font-family: 'Noto Serif SC', serif; }
-
 .blog-title,
 .main-menu,
 .mobile-menu,
@@ -21,18 +20,16 @@
 
 .post-content {
 	font-size: 1.0em;
-	line-height: 170%;
+	line-height: 180%;
 }
-
 .post-content pre { max-height: 600px; }
-.post-content blockquote,
 .post-content ul,
 .post-content ol,
 .post-content address,
 .post-content dl,
 .post-content li,
 .post-content .wp-caption {
-	line-height: 170%;
+	line-height: 180%;
 	margin-bottom: 1.4em;
 }
 
@@ -300,41 +297,6 @@ a.post-quote:active:before {
 /* 设置数学公式字体大小 */
 .katex { font-size: 1.0em; }
 
-/* 有序及无序列表样式修改 */
-.post-content > *:first-child { margin-top: 1.4em; }
-.post-content p {
-	margin-top: 1.4em;
-	margin-bottom: 0em;
-	line-height: 170%;
-}
-.post-content li ul li:first-child,
-.post-content li ol li:first-child { margin-top: 0em; }
-.post-content blockquote p { margin-top: 0em; }
-.post-content p + blockquote,
-.post-content p + table,
-.post-content table + table,
-.post-content pre { margin-top: 1.4em; }
-.post-content img { margin: 1.4em 0; }
-.full-width-gallery img { margin: 0; }
-.post-content ul,
-.post-content ol,
-.post-content li {
-	margin-left: 0.5em;
-	margin-bottom: 0px;
-}
-.post-content ul { list-style: disc; }
-.post-content ul ul ul { list-style: disc; }
-.post-content ul ul {
-	list-style: disc;
-	margin-left: 0.5em;
-}
-.post-content ol { list-style: decimal; }
-.post-content ol ol ol { list-style: decimal; }
-.post-content ol ol {
-	list-style: decimal;
-	margin-left: 0.5em;
-}
-
 /* n级标题样式修改 */
 .post-content h1 + p,
 .post-content h2 + p,
@@ -343,7 +305,7 @@ a.post-quote:active:before {
 	font-size: 2em;
 	padding-top: 0px;
 	margin: 60px 0 20px 0;
-	font-weight: 500;
+	font-weight: 900;
 }
 .post-content h2 {
 	font-size: 1.75em;
@@ -358,18 +320,10 @@ a.post-quote:active:before {
 	font-weight: 700;
 }
 
-.archive-container h3 { margin: 1em 0em; }
-.archive-container ul,
-.archive-container ol,
-.archive-container li {
-	margin-left: 1em;
-	margin-bottom: 1.4em;
-}
-
 /* 添加文章目录 */
 #article-index {
 	margin: 40px 0 40px;
-	border-left: 1.5px solid #ccc;
+	border-left: 1.8px solid #ddd;
 }
 #article-index > strong{
 	margin-left: 19px;
@@ -393,6 +347,68 @@ a.post-quote:active:before {
 	transition-timing-function: ease-out;
 }
 
+/* 有序及无序列表样式修改 */
+.post-content li ul li:first-child,
+.post-content li ol li:first-child { margin-top: 0em; }
+.post-content blockquote p { margin-top: 0em; }			/*文内引用首行上边距*/
+.post-content blockquote p + p { margin-top: 1.4em; }	/*文内引用除首段之外其他段间距*/
+.post-content p { margin: 1.4em 0 0 0; }
+.post-content blockquote,
+.post-content table,
+.post-content pre,
+.post-content img { margin: 1.4em 0; }
+.full-width-gallery img { margin: 0; }
+.post-content ul,
+.post-content ol,
+.post-content li {
+	margin-left: 0.5em;
+	margin-bottom: 0px;
+}
+.post-content ul { list-style: disc; }
+.post-content ul ul ul { list-style: disc; }
+.post-content ul ul {
+	list-style: disc;
+	margin-left: 1.5em;
+}
+.post-content ol { list-style: decimal; }
+.post-content ol ol ol { list-style: decimal; }
+.post-content ol ol {
+	list-style: decimal;
+	margin-left: 1.5em;
+}
+.archive-container ul,
+.archive-container ol,
+.archive-container li {
+	margin-left: 1em;
+	margin-bottom: 1.25em;
+}
+.archive-container h3 {
+	margin: 2em 0 1em 0;
+	font-size: 1.2em;
+}
+/* 添加列表缩进参考线 */
+.post-content li { position: relative; }
+.post-content li::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: -2.9em;
+	width: 1.8px;
+	height: calc(100% + 1.4em);
+	background: #ddd;
+}
+.post-content li:first-child::after { top: 1%; }		/* 百分比形式则参照物为父级元素 */
+.post-content li:last-child::after { height: 99%; }
+.post-content ul ul > li::after { display: block; }		/* 二级列表显示缩进参考系 */
+.post-content ol ol > li::after { display: block; }
+.post-content ul ul ul > li::after { display: block; }	/* 三级列表显示缩进参考系 */
+.post-content ol ol ol > li::after { display: block; }
+.archive-container li::after,	/* 不包含归档页 */
+.post-content ul > li::after,	/* 不包含一级列表 */
+.post-content ol > li::after,
+#article-index ul > li::after,	/* 不包含文章目录 */
+#article-index ol > li::after { display: none; }
+
 
 
 
@@ -405,15 +421,13 @@ a.post-quote:active:before {
 
 	/* 电脑端行高 */
 	.post-content p,
-	.post-content blockquote,
+	.post-content blockquote p,
 	.post-content ul,
 	.post-content ol,
 	.post-content address,
 	.post-content dl,
 	.post-content li,
-	.post-content .wp-caption {
-		line-height: 180%;
-	}
+	.post-content .wp-caption { line-height: 180%; }
 
 	/* body左边距、背景 */
 	body{
@@ -518,6 +532,8 @@ a.post-quote:active:before {
 		margin: 0 0 0 0;
 		padding-top: 30px;
 	}												/* 页面容器内边距 */
+	.post-content p,
+	.post-content blockquote p { line-height: 180%; }
 	.post-inner { padding: 50px 0; }				/* 文章容器内边距 */
 	.post-status-inner { padding: 60px 0; }
 	.posts .post,									/* 各文章间距 */
@@ -813,17 +829,16 @@ a.post-quote:active:before {
 	}
 
 	/* 间距调整 */
-	.post-content blockquote,
 	.post-content address,
 	.post-content dl,
 	.post-content .wp-caption { margin-bottom: 1.2em; }
-	.post-content p,
-	.post-content p + blockquote,
-	.post-content p + table,
-	.post-content table + table,
-	.post-content pre { margin-top: 1.2em; }
-	.post-content > *:first-child { margin-top: 1.2em; }
+	.post-content p { margin: 1.2em 0 0 0; }
+	.post-content blockquote p + p { margin-top: 1.2em; }	/*文内引用除首段之外其他段间距*/
+	.post-content blockquote,
+	.post-content table,
+	.post-content pre,
 	.post-content img { margin: 1.2em 0; }
+	.post-content li::after { height: calc(100% + 1.2em); }
 	.full-width-gallery img { margin: 0; }
 	.post-header { margin-bottom: 20px; }
 	.post-status-header { margin-bottom: 10px; }
@@ -867,9 +882,7 @@ a.post-quote:active:before {
 	a.post-quote,
 	.post-meta-toggle,
 	.archive-nav a,
-	.more-link {
-		-webkit-tap-highlight-color:rgba(255,0,0,0);
-	}
+	.more-link { -webkit-tap-highlight-color:rgba(255,0,0,0); }
 
 }
 
