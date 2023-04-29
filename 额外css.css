@@ -297,6 +297,12 @@ a.post-quote:active:before {
 /* 设置数学公式字体大小 */
 .katex { font-size: 1.0em; }
 
+/* 图片标签 */
+.post-content .wp-caption-text {
+	margin-top: -1.4em;
+	font-size: 1em;
+}
+
 /* n级标题样式修改 */
 .post-content h1 + p,
 .post-content h2 + p,
@@ -832,6 +838,7 @@ a.post-quote:active:before {
 	.post-content address,
 	.post-content dl,
 	.post-content .wp-caption { margin-bottom: 1.2em; }
+	.post-content .wp-caption-text { margin-top: -1.2em; }
 	.post-content p { margin: 1.2em 0 0 0; }
 	.post-content blockquote p + p { margin-top: 1.2em; }	/*文内引用除首段之外其他段间距*/
 	.post-content blockquote,
