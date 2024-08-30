@@ -188,7 +188,7 @@
 	text-align: center;
 	-webkit-font-smoothing: antialiased;
 	position: absolute;
-	top: 50px;
+	top: 54px;
 	left: 0px;
 	-webkit-transform: translateZ(0);
 	transform: translateZ(0);
@@ -214,8 +214,8 @@ a.post-quote:active:before {
 .post-content blockquote p { font-style: normal; }
 .post-content blockquote:before {
 	font-family: sans-serif;
-	top: 30px;
-	left: 20px
+	top: 33px;
+	left: 25px
 }
 
 
