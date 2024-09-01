@@ -797,8 +797,8 @@ a.post-quote:active:before {
 	.post-content a.more-link { font-size: 1.0rem; }
 	.comment-form input[type="submit"] { padding: 12px 14px; }
 	.mobile-menu {
-		top: 63px;					/* 顶栏宽64px，重叠1px防白边 */
-		bottom: calc(100% - 305px); /* 微调使下缘距菜单项30px，因最后一个菜单项较长，故304px多给了1px */
+		top: 61px;					/* 顶栏宽64px，重叠1px防白边 */
+		bottom: calc(100% - 304px); /* 微调使下缘距菜单项30px，因最后一个菜单项较长，故304px多给了1px */
 	}
 
 	/* 评论区边距 */
@@ -831,8 +831,8 @@ a.post-quote:active:before {
 		padding-top: 60px;
 	}
 	.mobile-menu {
-		top: 59px;					/* 顶栏宽60px，重叠1px防白边 */
-		bottom: calc(100% - 301px); /* 微调使下缘距菜单项30px，因最后一个菜单项较长，故300px多给了1px */
+		top: 57px;					/* 顶栏宽60px，重叠1px防白边 */
+		bottom: calc(100% - 300px); /* 微调使下缘距菜单项30px，因最后一个菜单项较长，故300px多给了1px */
 	}
 
 	/* 间距调整 */
