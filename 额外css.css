@@ -288,6 +288,7 @@ a.post-quote:active:before {
 /* 评论区 */
 .comment-actions { margin-top: 32px; }
 .bypostauthor > .comment .avatar { border: none; }
+.commentlist .children .children { margin-left: 0; }
 
 /* 页标题 */
 .page-title {
